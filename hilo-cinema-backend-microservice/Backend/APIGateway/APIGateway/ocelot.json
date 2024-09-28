@@ -1,0 +1,1306 @@
+{
+  "Routes": [
+    // Authentication Service
+    {
+      "DownstreamPathTemplate": "/api/EmployeeAuthen",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeAuthen",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4000
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmployeeAuthen/register",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeAuthen/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4000
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/CustomerAuthen",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerAuthen",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4000
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Movie Service
+    {
+      "DownstreamPathTemplate": "/api/Movies/{movieId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService/{movieId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movies",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movies/count",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService/count",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movies/{movieId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService/{movieId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movies",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movies/{movieId}/disable",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService/{movieId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movies/movieUrl/{movieUrl}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/MovieService/url/{movieUrl}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Actor
+
+    //GetById
+    {
+      "DownstreamPathTemplate": "/api/Actor/{actorId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ActorService/{actorId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //GetAll
+    {
+      "DownstreamPathTemplate": "/api/Actor",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ActorService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Edit
+    {
+      "DownstreamPathTemplate": "/api/Actor/{actorId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ActorService/{actorId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Add
+    {
+      "DownstreamPathTemplate": "/api/Actor",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ActorService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Hide
+    {
+      "DownstreamPathTemplate": "/api/Actor/{actorId}/disable",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ActorService/{actorId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Producer
+
+    // GetById
+    {
+      "DownstreamPathTemplate": "/api/Producer/{producerId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ProducerService/{producerId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //GetProducerByMovieId
+    {
+      "DownstreamPathTemplate": "/api/Producer/GetProducerByMovieId/{producerId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ProducerService/GetProducerByMovieId/{producerId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // GetAll
+    {
+      "DownstreamPathTemplate": "/api/Producer",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ProducerService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Edit
+    {
+      "DownstreamPathTemplate": "/api/Producer/{producerId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ProducerService/{producerId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Add
+    {
+      "DownstreamPathTemplate": "/api/Producer",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ProducerService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Hide
+    {
+      "DownstreamPathTemplate": "/api/Producer/{producerId}/disable",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ProducerService/{producerId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Category
+
+    // GetById
+    {
+      "DownstreamPathTemplate": "/api/Category/{categoryId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CategoryService/{categoryId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // GetAll
+    {
+      "DownstreamPathTemplate": "/api/Category",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CategoryService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Edit
+    {
+      "DownstreamPathTemplate": "/api/Category/{categoryId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CategoryService/{categoryId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Add
+    {
+      "DownstreamPathTemplate": "/api/Category",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CategoryService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Hide
+    {
+      "DownstreamPathTemplate": "/api/Category/{categoryId}/disable",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CategoryService/{categoryId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+
+    // Theater Service
+    {
+      "DownstreamPathTemplate": "/api/Theaters",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/TheaterService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Theaters",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/TheaterService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Theaters/{theaterId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/TheaterService/{theaterId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Theaters/{theaterId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/TheaterService/{theaterId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Theaters/{theaterId}/disable",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/TheaterService/{theaterId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Theaters/Count",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/TheaterService/Count",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Seat service
+    {
+      "DownstreamPathTemplate": "/api/Seats",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/SeatService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Seats",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/SeatService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Seats/{seatId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/SeatService/{seatId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Seats/GetSeatsByRoom/{roomId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/SeatService/GetSeatsByRoom/{roomId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Seats/{seatId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/SeatService/{seatId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Seats/{seatId}/disable",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/SeatService/{seatId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //RoomService
+    {
+      "DownstreamPathTemplate": "/api/Rooms",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/RoomService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rooms",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/RoomService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rooms/{roomId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/RoomService/{roomId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rooms/{roomId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/RoomService/{roomId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rooms/GetRoomByTheater/{theaterId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/RoomService/GetRoomByTheater/{theaterId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rooms/{roomId}/disable",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/RoomService/{roomId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Schedule Service
+    {
+      "DownstreamPathTemplate": "/api/Schedule",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/getSeatsBySchedule",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/getSeatsBySchedule",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/GetAllBasicSchedule",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/GetAllBasicSchedule",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/movieUrl/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/movieUrl/{url}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/GetScheduleByMovieId/{movieId}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/GetScheduleByMovieId/{movieId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/DeleteSchedule",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/DeleteSchedule",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/ByMovieId/{id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/ByMovieId/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/CreateSchedule",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/CreateSchedule",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Schedule/CheckIsExistInvoice",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/ScheduleService/CheckIsExistInvoice",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Sale Service
+    {
+      "DownstreamPathTemplate": "/api/Invoice",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/InvoiceService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Count
+    {
+      "DownstreamPathTemplate": "/api/Invoice/count",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/InvoiceService/count",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Invoice",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/InvoiceService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Invoice/GetInvoicesByCustomerId/{customerId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/InvoiceService/GetInvoicesByCustomerId/{customerId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Invoice/GetInvoiceById/{invoiceId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/InvoiceService/GetInvoiceById/{invoiceId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Payment/createInvoice",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/PaymentService/createInvoice",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Food",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/FoodService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Customer Service
+    {
+      "DownstreamPathTemplate": "/api/Customer",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/{CustomerId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService/{CustomerId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/{CustomerId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService/{CustomerId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/phone/{phone}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService/phone/{phone}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/CheckEmail",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService/CheckEmail",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/{customerId}/disable",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService/{customerId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/verify-password",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/CustomerService/verify-password",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+
+    },
+    // Employee Service
+    //Add, Update, GetAll
+    {
+      "DownstreamPathTemplate": "/api/Employee",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeService",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Count
+    {
+      "DownstreamPathTemplate": "/api/Employee/count",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeService/count",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //GetById
+    {
+      "DownstreamPathTemplate": "/api/Employee/{employeeId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeService/{employeeId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Check Mail
+    {
+      "DownstreamPathTemplate": "/api/Employee/CheckEmail",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeService/CheckEmail",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    //Update
+    {
+      "DownstreamPathTemplate": "/api/Employee/{employeeId}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeService/{employeeId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Employee/{employeeId}/disable",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/EmployeeService/{employeeId}/disable",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Promotion Service
+    {
+      "DownstreamPathTemplate": "/api/PromotionService",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/PromotionService",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    // Blog Service
+    {
+      "DownstreamPathTemplate": "/api/Blogs",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/BlogService",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5008
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Blogs/{id}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/BlogService/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5008
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

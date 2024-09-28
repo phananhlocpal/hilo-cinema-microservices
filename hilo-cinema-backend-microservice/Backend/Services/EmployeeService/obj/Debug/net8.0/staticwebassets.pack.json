@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo1_black.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo1_black.png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo1_color.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo1_color.png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo1_white.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo1_white.png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo2_color (2).png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo2_color (2).png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo2_color.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo2_color.png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo2_white.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo2_white.png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo3_color.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo3_color.png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo3_white (2).png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo3_white (2).png"
+    },
+    {
+      "Id": "C:\\Users\\Surface\\Documents\\Pal\\myproject\\Agile\\Official\\Hilo-Cinema-Project-master\\hilo-cinema-backend-microservice\\Backend\\Services\\EmployeeService\\wwwroot\\img\\logo\\logo3_white.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo3_white.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EmployeeService.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EmployeeService.props",
+      "PackagePath": "build\\EmployeeService.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EmployeeService.props",
+      "PackagePath": "buildMultiTargeting\\EmployeeService.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EmployeeService.props",
+      "PackagePath": "buildTransitive\\EmployeeService.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

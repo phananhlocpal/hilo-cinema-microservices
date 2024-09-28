@@ -1,0 +1,39 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "123456"
+    ports:
+      - "1434:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+    networks:
+      - backend
+
+  movieservice:
+    image: ${DOCKER_REGISTRY-}movieservice
+    build:
+      context: .
+      dockerfile: Services/MovieService/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=sqlserver;Initial Catalog=Movie;User ID=sa;Password=123456;Trust Server Certificate=True;  
+    networks:
+      - backend
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: APIGateway/APIGateway/Dockerfile
+    networks:
+      - backend
+
+volumes:
+  sqlserverdata:

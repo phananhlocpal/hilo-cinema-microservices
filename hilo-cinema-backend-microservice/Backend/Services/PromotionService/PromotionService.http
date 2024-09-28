@@ -1,0 +1,6 @@
+@PromotionService_HostAddress = http://localhost:5167
+
+GET {{PromotionService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
